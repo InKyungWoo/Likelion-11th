@@ -1,0 +1,19 @@
+    .color {
+      color: rgb(159, 42, 168);
+    }
+    .font-50 {
+      font-size: 50px;
+    }
+
+  * {background-color: rgb(191, 236, 236);} 
+  
+  h1 {
+    background-color: rgb(19, 113, 107);
+  }
+
+  #id1 {background: yellowgreen; color: darkgreen; font-size: 50px; display: 
+    flex; justify-content:flex-start; align-items:flex-start;}
+
+  .tb td {
+    border: 1px solid #000;
+  }
