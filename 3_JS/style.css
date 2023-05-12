@@ -13,7 +13,7 @@ body {
   align-items: center;
 }
 
-.clock {
+.Clock {
   min-width: 360px;
   margin: 0 auto;
   padding: 50px 0;
@@ -24,8 +24,10 @@ body {
 
 .today {
   margin-bottom: 10px;
+  white-space: pre-line;
 }
 
 .time {
   margin-top: 10px;
+  white-space: pre-line;
 }
