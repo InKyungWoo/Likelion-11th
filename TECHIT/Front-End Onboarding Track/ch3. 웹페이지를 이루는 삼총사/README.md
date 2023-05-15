@@ -1,4 +1,5 @@
-![스크린샷 2023-05-15 오전 6.27.34.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/444f30dc-907f-456b-835d-68b130758cb4/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2023-05-15_%E1%84%8B%E1%85%A9%E1%84%8C%E1%85%A5%E1%86%AB_6.27.34.png)
+![스크린샷 2023-05-15 오전 6 27 34](https://github.com/InKyungWoo/Likelion-11th/assets/102344718/1b2084c0-8237-49de-92b1-59a29f11313f)
+
 
 ### 1. HTML
 
@@ -23,7 +24,7 @@
 
 설정  > 도구 더보기 > 개발자도구 → elements에서 각각의 요소와 태그 확인 가능, 수정해도 로컬 브라우저에서만 반영됨
 
-`alt + cmd + i`
+단축키 : `alt + cmd + i`
 
 - HTML/CSS/JS 등 요소 내용 확인
 - 에러로그 확인
