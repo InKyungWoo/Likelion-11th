@@ -43,6 +43,8 @@
 
 - HTML을 구성하는 2개의 축 = `<head>` , `<body>`
 
+<br>
+
 ### 2. HTML <head>
 
 
@@ -61,6 +63,8 @@
 
 `<meta name="viewport" content="width=device-width, initial-scale=1.0">` : 브라우저 너비를 설정하는 메타태그
 
+<br>
+    
 ### 3. **블록 요소와 인라인 요소**
 
 
@@ -79,7 +83,8 @@
 
 ![스크린샷 2023-05-15 오후 10 30 35](https://github.com/InKyungWoo/Likelion-11th/assets/102344718/63361994-ce5f-4bce-bd6c-8028d6a3e34a)
 
-
+<br>
+    
 ### 4. **HTML <body>**
 
 - `<h1>` - heading
@@ -98,6 +103,8 @@
 - `<div>` - 여러개 요소들을 묶어서 그룹화하는 역
     - 여러 태그들 묶음, **html 요소 단위**
 
+    <br>
+    
 ### 5. **HTML 실습**
 
 ```html
