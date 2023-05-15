@@ -2,18 +2,21 @@
 
 `Hyper Text Markup Language` : 태그를 통해 텍스트에 생명을 불어넣는 것
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/4c3c8ae1-1545-414f-b0c1-3f93b55215ae/Untitled.png)
+![스크린샷 2023-05-15 오후 10 10 25](https://github.com/InKyungWoo/Likelion-11th/assets/102344718/ea37a62d-10dd-4991-a275-ebb792dbebd7)
+
 
 - markup: 태그를 붙이는 작업
 - 요소(element) : `<여는 태그>` 내용 `</닫는태그>`
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0e5616e6-a0de-413a-9f24-1d73bfdcf374/Untitled.png)
+![스크린샷 2023-05-15 오후 10 11 53](https://github.com/InKyungWoo/Likelion-11th/assets/102344718/afb69615-47ad-49f0-8360-ce3b9fec2680)
+
 
 - `Attribute`: 속성
     - 속성이름=”속성값”
     - 한 태그 안에 여러개의 속성을 가지면 띄어쓰기로 구분해주면 됨)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/81505bfd-2ffc-452d-bdd1-311272dd4e8f/Untitled.png)
+![스크린샷 2023-05-15 오후 10 13 46](https://github.com/InKyungWoo/Likelion-11th/assets/102344718/d3614d04-af19-4bf5-af04-886af64e5679)
+
 
 - 주석 단축키: `cmd+/`
     - html 문서에 주석이 모두 포함되기 때문에 개인정보 조심!
@@ -74,7 +77,8 @@
 - 컨텐츠의 너비만 차지하며, 줄바꿈이 일어나지 않으므로 수평으로 쌓임
 - `<a>`, `<span>`, `<img>`, `<input>`, `<button>`, `<label>`, `<strong>`, `<em>` 등
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/301ece48-f77b-4a76-8817-48759acfe5db/Untitled.png)
+![스크린샷 2023-05-15 오후 10 30 35](https://github.com/InKyungWoo/Likelion-11th/assets/102344718/63361994-ce5f-4bce-bd6c-8028d6a3e34a)
+
 
 ### 4. **HTML <body>**
 
