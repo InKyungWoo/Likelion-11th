@@ -1,0 +1,136 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Noto Serif KR', serif;
+}
+
+a:link, a:visited {
+  text-decoration: none;    /* 밑줄 없애기, 검은색 글씨 */
+  color: rgb(255, 255, 255);
+}
+
+.container {
+  width: 960px;   /* 통상 내용이 960px 정도 차지하도록 함 */
+  margin: 0 auto;
+}
+
+/* navigation bar  */
+nav {
+  height: 80px;
+  background-color: rgb(167, 123, 123);
+  line-height: 80px;
+}
+
+nav::after {
+  content: "";    /* 빈 영역 막아주기 */
+  display: block;
+  clear: both;
+}
+
+.nav-logo {
+  font-size: 30px;
+  float: left;
+  margin: 0;
+}
+
+.nav-menu {
+  float: right;
+}
+
+.nav-btn {
+  list-style-type: none;  /* 버튼에 점 없애기 */
+  margin: 0;
+}
+
+ul.nav-btn > li {   /* 'nav-btn이라는 클래스를 갖는 ul 태그 내부의 li 태그' 라는 뜻 */
+  float: left;
+  margin-left: 25px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* heaer  */
+.hd {
+  position: relative;
+  height: 600px;
+  text-align: center;
+}
+
+.hd-title {
+  font-size: 50px;
+  color: rgb(118, 79, 74);
+  margin-top: 0;
+  margin-bottom: 30px;
+  padding-top: 200px;
+}
+
+.hd-content {
+  font-size: 20px;
+}
+
+.hd:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;   /* 불투명도 */
+  background-image: url("./016.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.hd .container {    /* header 하위의 container */
+  position: relative;
+  color: black;
+}
+
+/* section */
+.sec {
+  text-align: center;
+  padding: 100px 0;
+  background-color: rgb(229, 183, 178);
+}
+
+.sec article {
+  float: left;
+  width: 300px;
+  margin-right: 30px;
+}
+
+.sec article:last-child {
+  margin-right: 0;
+}
+
+.sec article img {
+  width: 100%;
+  height: auto;
+}
+
+.card-img {
+  overflow: hidden;
+  width: 300px;
+  height: 300px;
+}
+
+.sec::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* footer */
+.ft {
+  padding: 15px;
+  text-align: center;
+  background-color: rgb(118, 79, 74);
+  font-weight: bold;
+  color: rgb(252, 239, 239);
+}
