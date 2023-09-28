@@ -13,7 +13,6 @@ const Item = ({ item, setChanged, checkedCount, setCheckedCount }) => {
   const handleCheckboxChange = () => {
     setCheckedCount((prevCount) => (isChecked ? prevCount - 1 : prevCount + 1));
     setIsChecked(!isChecked);
-    setCount(count + 1);
   };
 
   return (
