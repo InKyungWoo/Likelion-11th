@@ -2,40 +2,38 @@ import { useState, useEffect } from "react";
 import Item from "./Item";
 
 function App() {
-  // 여기서 state 선언
-  const [countA, setCountA] = useState(0);
-  const [countB, setCountB] = useState(0);
-  const [countC, setCountC] = useState(0);
 
+  // 변경된 아이템 표시
   const [changed, setChanged] = useState(null);
-
-  // countA 가 변할때마다 setChanged 실행
-  useEffect(() => {
-    setChanged("A");
-}, [countA]);
-
-useEffect(() => {
-  setChanged("B");
-}, [countB]);
-
-useEffect(() => {
-  setChanged("C");
-}, [countC]);
+  // 체크 개수 카운트
+  const [checkedCount, setCheckedCount] = useState(0);
 
   return (
     <>
       <article>
-      <section className={"changed"}>
-        <h1>방금 변경된 아이템</h1>
-    <   div>{changed}</div>
-      </section>
+        <section className={"changed"}>
+          <h1>🔄️ 방금 변경된 아이템</h1>
+          <div>{changed}</div>
+        </section>
+        {/* 체크된 아이템 개수 표시 */}
+        <section className={"changed"}>
+          <h1>✅ 체크된 아이템 개수</h1>
+          <div>{checkedCount}개</div>
+        </section>
         {/* 아이템 리스트 */}
         <section className={"list"}>
-          <h1>아이템 리스트</h1>
+          <h1>💟 아이템 리스트</h1>
           {/* 컴포넌트화 */}
           <ol>
-            {["A", "B", "C", "D", "E"].map((item) => {
-              return <Item key={item} item={item} setChanged={setChanged}/>;
+            {["A", "B", "C", "D", "E", "F", "G", "H"].map((item) => {
+              return (
+                <Item 
+                  key={item} 
+                  item={item} 
+                  setChanged={setChanged}
+                  checkedCount={checkedCount}
+                  setCheckedCount={setCheckedCount}
+                />);
             })}
           </ol>
         </section>

@@ -1,16 +1,34 @@
 import React, { useState, useEffect } from "react";
 
-const Item = ({ item, setChanged }) => {
+const Item = ({ item, setChanged, checkedCount, setCheckedCount }) => {
   const [count, setCount] = useState(0);
+  const [isChecked, setIsChecked] = useState(false);
 
+  // 원래 하나씩 지정해줬던거, count가 변할때마다 setChanged 실행
   useEffect(() => {
     setChanged(item);
-    }, [count]);
+  }, [count, isChecked]);
+  
+  // 선택되면 +1, 해제되면 -1
+  const handleCheckboxChange = () => {
+    setCheckedCount((prevCount) => (isChecked ? prevCount - 1 : prevCount + 1));
+    setIsChecked(!isChecked);
+    setCount(count + 1);
+  };
 
   return (
     <>
       <li>
-        <span>{item}</span>
+        <div>
+          {/* 체크박스 */}
+          <input
+            type="checkbox"
+            onChange={handleCheckboxChange}
+            checked={isChecked}
+          />
+          {/* 아이템 이름 표시 */}
+          <span style={{ fontWeight: "bold" }}>{item}</span>
+        </div>
         <div>
           <div>{count}</div>
           <div className={"button-list"}>
