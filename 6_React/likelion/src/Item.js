@@ -11,9 +11,10 @@ const Item = ({ item, setChanged, checkedCount, setCheckedCount }) => {
   
   // 선택되면 +1, 해제되면 -1
   const handleCheckboxChange = () => {
-    setCheckedCount((prevCount) => (isChecked ? prevCount - 1 : prevCount + 1));
     setIsChecked(!isChecked);
+    setCheckedCount((prevCount) => (!isChecked ? prevCount + 1 : prevCount - 1));
   };
+  
 
   return (
     <>
@@ -35,40 +36,40 @@ const Item = ({ item, setChanged, checkedCount, setCheckedCount }) => {
               onClick={() => {
                 setCount(count - 1);
               }}
-            >
-              -
-            </button>
-            <button
-              onClick={() => {
-                setCount(count + 1);
-              }}
-            >
-              +
-            </button>
+              >
+                -
+              </button>
+              <button
+                onClick={() => {
+                  setCount(count + 1);
+                }}
+              >
+                +
+              </button>
+            </div>
           </div>
-        </div>
-      </li>
-      <style jsx>{`
-        li {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          padding: 1rem;
-          border-radius: 0.5rem;
-          background-color: white;
-          box-shadow: 0px 2px 10px 0px rgb(182 158 198 / 15%);
-          height: 2rem;
-        }
-        li > span {
-          font-size: 1.5rem;
-          font-weight: 500;
-        }
-        li > div {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          gap: 1rem;
-        }
+        </li>
+        <style jsx>{`
+          li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            background-color: white;
+            box-shadow: 0px 2px 10px 0px rgb(182 158 198 / 15%);
+            height: 2rem;
+          }
+          li > span {
+            font-size: 1.5rem;
+            font-weight: 500;
+          }
+          li > div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+          }
         li > div > div:first-child {
           display: flex;
           justify-content: flex-end;

@@ -7,6 +7,18 @@ function App() {
   const [changed, setChanged] = useState(null);
   // 체크 개수 카운트
   const [checkedCount, setCheckedCount] = useState(0);
+  // 전체 선택...왜 않되....
+  const [selectAllChecked, setSelectAllChecked] = useState(false);
+
+  const handleCheckboxChange = (item, isChecked, setCount, setIsChecked) => {
+    setIsChecked(!isChecked);
+    setCheckedCount((prevCount) => (isChecked ? prevCount - 1 : prevCount + 1));
+  };
+
+  const handleSelectAllChange = () => {
+    setSelectAllChecked(!selectAllChecked);
+    setCheckedCount(selectAllChecked ? 0 : 8); // Assuming you have 8 items
+  };
 
   return (
     <>
@@ -23,6 +35,14 @@ function App() {
         {/* 아이템 리스트 */}
         <section className={"list"}>
           <h1>💟 아이템 리스트</h1>
+          <section className={"changed"}>
+          <input
+            type="checkbox"
+            onChange={handleSelectAllChange}
+            checked={selectAllChecked}
+          />
+          <span>전체 선택</span>
+        </section>
           {/* 컴포넌트화 */}
           <ol>
             {["A", "B", "C", "D", "E", "F", "G", "H"].map((item) => {
@@ -33,11 +53,12 @@ function App() {
                   setChanged={setChanged}
                   checkedCount={checkedCount}
                   setCheckedCount={setCheckedCount}
+                  handleCheckboxChange={handleCheckboxChange}
                 />);
-            })}
-          </ol>
-        </section>
-      </article>
+              })}
+              </ol>
+            </section>
+          </article>
       <style jsx>{`
         article {
           height: 100vh;
