@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const Item = ({ item, setChanged, checkedCount, setCheckedCount }) => {
+const Item = ({id, item, setChanged, setCheckedCount, checkedList, setCheckedList}) => {
   const [count, setCount] = useState(0);
   const [isChecked, setIsChecked] = useState(false);
 
@@ -10,9 +10,15 @@ const Item = ({ item, setChanged, checkedCount, setCheckedCount }) => {
   }, [count, isChecked]);
   
   // 선택되면 +1, 해제되면 -1
-  const handleCheckboxChange = () => {
+  const handleCheckboxChange = (e) => {
     setIsChecked(!isChecked);
-    setCheckedCount((prevCount) => (!isChecked ? prevCount + 1 : prevCount - 1));
+    if(!isChecked) {
+      setCheckedList(prev => [...prev, id])
+      setCheckedCount((prevCount) => prevCount + 1 )
+    } else {
+      setCheckedList(checkedList.filter((el) => el !== id))
+      setCheckedCount((prevCount) => prevCount - 1 )
+    }
   };
   
 
@@ -24,7 +30,7 @@ const Item = ({ item, setChanged, checkedCount, setCheckedCount }) => {
           <input
             type="checkbox"
             onChange={handleCheckboxChange}
-            checked={isChecked}
+            checked={checkedList.includes(id) ? true : false}
           />
           {/* 아이템 이름 표시 */}
           <span style={{ fontWeight: "bold" }}>{item}</span>

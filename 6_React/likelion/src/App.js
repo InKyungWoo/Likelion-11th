@@ -10,14 +10,29 @@ function App() {
   // 전체 선택...왜 않되....
   const [selectAllChecked, setSelectAllChecked] = useState(false);
 
-  const handleCheckboxChange = (item, isChecked, setCount, setIsChecked) => {
-    setIsChecked(!isChecked);
-    setCheckedCount((prevCount) => (isChecked ? prevCount - 1 : prevCount + 1));
-  };
+  const [checkedList, setCheckedList] = useState([]);
+  const data = [
+    {id: 0, title: "A"},
+    {id: 1, title: "B"},
+    {id: 2, title: "C"},
+    {id: 3, title: "D"},
+    {id: 4, title: "E"},
+    {id: 5, title: "F"},
+    {id: 6, title: "G"},
+    {id: 7, title: "H"},
+  ]
 
-  const handleSelectAllChange = () => {
+  const handleSelectAllChange = (id) => {
     setSelectAllChecked(!selectAllChecked);
-    setCheckedCount(selectAllChecked ? 0 : 8); // Assuming you have 8 items
+    if(!selectAllChecked) {
+      setCheckedCount(8)
+      const checkedArray = [];
+      data.forEach((el) => checkedArray.push(el.id));
+      setCheckedList(checkedArray);
+    } else {
+      setCheckedCount(0)
+      setCheckedList([]);
+    }    
   };
 
   return (
@@ -39,21 +54,23 @@ function App() {
           <input
             type="checkbox"
             onChange={handleSelectAllChange}
-            checked={selectAllChecked}
+            checked={checkedList.length === data.length ? true : false}
           />
           <span>전체 선택</span>
         </section>
           {/* 컴포넌트화 */}
           <ol>
-            {["A", "B", "C", "D", "E", "F", "G", "H"].map((item) => {
+            {data.map((item) => {
               return (
                 <Item 
                   key={item} 
-                  item={item} 
+                  id={item.id}
+                  item={item.title} 
                   setChanged={setChanged}
                   checkedCount={checkedCount}
                   setCheckedCount={setCheckedCount}
-                  handleCheckboxChange={handleCheckboxChange}
+                  setCheckedList={setCheckedList}
+                  checkedList={checkedList}
                 />);
               })}
               </ol>
